@@ -2,7 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
-        name: "名前"
+        name: "ニックネーム"
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
@@ -10,7 +10,7 @@ ja:
         remember_me: "ログインを記憶"
     models:
       user: "ユーザ"
-  devise:
+  users:
     confirmations:
       new:
         resend_confirmation_instructions: "アカウント確認メール再送"
