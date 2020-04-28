@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row" style="height: 240px">
+    <div class="col-4 mx-auto">
+      <% if review.image.attached? %>
+          <%= image_tag review.image, class: "rounded h-100 w-100"%>
+      <% end %>
+    </div>
+    <div class="col-8">
+      <h2><%= review.name%></h2>
+      <table class="table table-bordered">
+        <tr>
+          <th>プリンの固さ</th>
+          <td><%= review.hardness%></td>
+        </tr>
+        <tr>
+          <th>プリンの濃厚さ</th>
+          <td><%= review.richness%></td>
+        </tr>
+        <tr>
+          <th>キャラメル</th>
+          <td><%= review.caramel%></td>
+        </tr>
+      </table>
+      <div class="d-flex justify-content-between">
+        <%= link_to "レビュー詳細を見る", review %>
+        <% if current_user == review.user%>
+            <%= link_to "このレビューを削除する", review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

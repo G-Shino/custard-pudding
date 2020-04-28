@@ -1,0 +1,9 @@
+<h1><%= @review.name %>の詳細ページ</h1>
+<% if current_user == @review.user%>
+    <%= link_to "このレビューを削除する", @review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+<% end %>
+<p><%= @review.hardness %></p>
+<% if @review.image.attached? %>
+    <%= image_tag @review.image%>
+<% end %>
+<%= link_to "店舗詳細に戻る", @review.shop %>

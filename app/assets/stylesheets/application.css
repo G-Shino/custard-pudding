@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+img {
+  object-fit: cover;
+  /*object-position: 0.0;*/
+}

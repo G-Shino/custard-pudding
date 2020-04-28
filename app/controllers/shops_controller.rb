@@ -1,10 +1,13 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @shops = Shop.all
   end
   
   def show
     @shop=Shop.find(params[:id])
+    @reviews = @shop.reviews
+    session[:shop_id] = @shop.id
   end
 
   def new
@@ -23,7 +26,7 @@ class ShopsController < ApplicationController
   end
 
   def destroy
-    @shop = Shop.find(params[:id])
+    @shop = current_user.shops.find(params[:id])
     @shop.destroy
     flash[:success] = "店舗を削除しました"
     redirect_to shops_path

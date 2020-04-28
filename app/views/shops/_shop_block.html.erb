@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row" style="height: 240px">
+    <div class="col-4 mx-auto">
+      <% if shop.image.attached? %>
+          <%= image_tag shop.image, class: "rounded h-100 w-100"%>
+      <% end %>
+    </div>
+    <div class="col-8">
+      <h2><%= shop.name%></h2>
+      <table class="table table-bordered">
+        <tr>
+          <th>店舗の種類</th>
+          <td><%= shop.kind%></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td><%= shop.address%></td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td><%= shop.holiday%></td>
+        </tr>
+      </table>
+      <div class="d-flex justify-content-between">
+        <%= link_to "店舗詳細を見る", shop %>
+        <% if current_user == shop.user%>
+            <%= link_to "この店舗を削除する", shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

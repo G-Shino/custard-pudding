@@ -2,7 +2,9 @@
 <% if current_user == @shop.user%>
     <%= link_to "この店舗を削除する", @shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
 <% end %>
+<%= link_to "レビューを投稿する", new_review_path, class: "btn btn-primary btn-sm"%>
 <p><%= @shop.address %></p>
 <% if @shop.image.attached? %>
     <%= image_tag @shop.image%>
 <% end %>
+<%= render "reviews/reviews_list", reviews: @reviews %>

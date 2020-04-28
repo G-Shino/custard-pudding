@@ -1,6 +1,2 @@
 <h1>店舗一覧</h1>
-<ul>
-    <% @shops.each do |shop| %>
-        <li><%= link_to shop.id, shop %>:<%= shop.name %></li>
-    <% end %>
-</ul>
+<%= render "shops/shops_list", shops: @shops %>
