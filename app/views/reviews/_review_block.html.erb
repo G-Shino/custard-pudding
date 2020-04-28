@@ -26,6 +26,7 @@
         <% if current_user == review.user%>
             <%= link_to "このレビューを削除する", review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
         <% end %>
+        <%= render "favorites/favorite_button", review: review %>
       </div>
     </div>
   </div>
