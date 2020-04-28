@@ -1,0 +1,8 @@
+<h1><%= @shop.name %>の詳細ページ</h1>
+<% if current_user == @shop.user%>
+    <%= link_to "この店舗を削除する", @shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+<% end %>
+<p><%= @shop.address %></p>
+<% if @shop.image.attached? %>
+    <%= image_tag @shop.image%>
+<% end %>
