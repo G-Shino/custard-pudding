@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-9">
+    <div class="col-md-9">
       <h1><%= @review.name %>の詳細ページ</h1>
     </div>
-    <div class="col-3 d-flex h-75 justify-content-end align-self-center">
+    <div class="col-md-3 d-flex h-75 justify-content-end align-self-center mb-3">
       <% if current_user == @review.user%>
-        <%= link_to "このレビューを削除する", @review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+        <%= link_to "このレビューを削除する", @review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-block" %>
       <% end %>
     </div>
   </div>
@@ -36,7 +36,7 @@
           <td><%= @review.caramel%></td>
         </tr>
       </table>
-      <div class="d-flex d-md-none justify-content-between mt-3">
+      <div class="d-flex d-md-none justify-content-between mt-3 mb-5">
         <%= link_to "店舗詳細に戻る", @review.shop, class: "btn btn-primary btn-block" %>
       </div>
     </div>

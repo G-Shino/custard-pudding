@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-9">
+    <div class="col-md-9">
       <h1><%= @shop.name %>の詳細ページ</h1>
     </div>
-    <div class="col-3 d-flex h-75 justify-content-end align-self-center">
+    <div class="col-md-3 d-flex h-75 justify-content-end align-self-center mb-3">
       <% if current_user == @shop.user%>
-        <%= link_to "この店舗を削除する", @shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm h-10px" %>
+        <%= link_to "この店舗を削除する", @shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-block h-10px" %>
       <% end %>
     </div>
   </div>
