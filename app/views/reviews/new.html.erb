@@ -8,15 +8,16 @@
         </div>
         <div class="form-group">
             <%= f.label :hardness, "固さ" %><br />
-            <%= f.text_field :hardness, class: "form-control", required: true  %>
+            <%= f.select :hardness, {"固め": 1, "ちょっと固め": 2, "普通": 3, "少し柔らかい": 4, "とろける": 5}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
         </div>
         <div class="form-group">
             <%= f.label :richness, "濃厚さ" %><br />
-            <%= f.text_field :richness, class: "form-control", required: true  %>
+            <%= f.select :richness, {"濃厚": 1, "ちょっと濃いめ": 2, "普通": 3, "少し薄め": 4, "あっさり": 5}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
+        
         </div>
         <div class="form-group">
             <%= f.label :caramel, "キャラメル" %><br />
-            <%= f.text_field :caramel, class: "form-control", required: true  %>
+            <%= f.select :caramel, {"苦い": 1, "甘い": 2, "なし": 3}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
         </div>
         <div class="form-group">
             <%= f.label :image, "商品写真" %><br />
