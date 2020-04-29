@@ -18,9 +18,10 @@
 
   <body>
     <%= render "layouts/navbar" %>
-    <div class="container">
-      <%= yield %>
+    <%= render "toppages/topimage" %>
+    <div class="container mt-5">
       <%= render "layouts/flash_messages" %>
+      <%= yield %>
     </div>
   </body>
 </html>
