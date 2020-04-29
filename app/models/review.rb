@@ -8,5 +8,5 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :shop
   has_one_attached :image
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 end
