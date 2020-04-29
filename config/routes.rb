@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users, only: [:show]
   root to: "toppages#index"
   resources :shops, only: [:index, :show, :new, :create, :destroy]
   resources :reviews, only: [:show, :new, :create, :destroy]
