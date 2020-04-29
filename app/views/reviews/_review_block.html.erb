@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container d-none d-md-block">
   <div class="row">
-    <div class="col-4" style="height: 250px">
+    <div class="col-5" style="height: 250px">
       <% if review.image.attached? %>
           <%= image_tag review.image, class: "rounded h-100 w-100"%>
       <% end %>
     </div>
-    <div class="col-8">
+    <div class="col-7">
       <div class="d-flex justify-content-between">
         <h2><%= review.name%></h2>
         <div style="height: 1.5rem">
           <% if current_user == review.user%>
-            <%= link_to "このレビューを削除する", review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+            <%= link_to "削除する", review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
           <% else %>
             <%= render "favorites/favorite_button", review: review %>
           <% end %>
@@ -35,4 +35,25 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container d-block d-md-none">
+  <div class="d-flex justify-content-between">
+    <h2><%= review.name%></h2>
+    <div style="height: 1.5rem">
+      <% if current_user == review.user%>
+        <%= link_to "削除する", review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+      <% else %>
+        <%= render "favorites/favorite_button", review: review %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12" style="height: 250px">
+      <% if review.image.attached? %>
+          <%= image_tag review.image, class: "rounded h-100 w-100"%>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to "レビュー詳細を見る", review, class: "btn btn-primary btn-block" %>
 </div>

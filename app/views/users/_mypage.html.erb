@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-8">
+    <h1><%= user.name %>さんのページ</h1>
+  </div>
+  <div class="col-4 d-flex justify-content-end align-self-center">
+    <%= link_to "店舗作成", new_shop_path, class: "btn btn-primary btn-sm mr-1 d-none d-md-block" %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-sm" %>
+  </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-12">
+    <ul class="nav nav-tabs nav-justified mb-3">
+      <li class="nav-item"><a href="<%= favorites_user_path(user) %>" class="nav-link <%= 'active' if current_page?(favorites_user_path(user)) %>">食べたいプリン</a></li>
+      <li class="nav-item"><a href="<%= myshops_user_path(user) %>" class="nav-link <%= 'active' if current_page?(myshops_user_path(user)) %>">作成した店舗</a></li>
+      <li class="nav-item"><a href="<%= myreviews_user_path(user) %>" class="nav-link <%= 'active' if current_page?(myreviews_user_path(user)) %>">作成したレビュー</a></li>
+    </ul>
+    <% if current_page?(favorites_user_path(user)) %>
+        <%= render 'reviews/reviews_list', reviews: lists %>
+    <% elsif current_page?(myshops_user_path(user)) %>
+        <%= render 'shops/shops_list', shops: lists %>
+    <% elsif current_page?(myreviews_user_path(user)) %>
+        <%= render 'reviews/reviews_list', reviews: lists %>
+    <% end %>
+  </div>
+</div>

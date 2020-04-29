@@ -1,6 +1,6 @@
-<div class="container">
-  <div class="row" style="height: 240px">
-    <div class="col-4 mx-auto">
+<div class="container d-none d-md-block">
+  <div class="row">
+    <div class="col-4" style="height: 250px">
       <% if shop.image.attached? %>
           <%= image_tag shop.image, class: "rounded h-100 w-100"%>
       <% end %>
@@ -10,7 +10,7 @@
         <h2><%= shop.name%></h2>
         <div style="height: 1.5rem">
           <% if current_user == shop.user%>
-              <%= link_to "この店舗を削除する", shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+              <%= link_to "削除する", shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
           <% end %>
         </div>
       </div>
@@ -33,4 +33,23 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container d-block d-md-none">
+  <div class="d-flex justify-content-between">
+    <h2><%= shop.name%></h2>
+    <div style="height: 1.5rem">
+      <% if current_user == shop.user%>
+        <%= link_to "削除する", shop, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12" style="height: 250px">
+      <% if shop.image.attached? %>
+          <%= image_tag shop.image, class: "rounded h-100 w-100"%>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to "店舗詳細を見る", shop, class: "btn btn-primary btn-block" %>
 </div>

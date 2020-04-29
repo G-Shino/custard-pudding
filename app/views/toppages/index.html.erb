@@ -1,10 +1,10 @@
 <div class="row">
-  <div class="col-9">
+  <div class="col-md-9 col-12">
     <h2>New!!</h2>
     <hr/>
     <%= render "reviews/reviews_list", reviews: @reviews %>
   </div>
-  <aside class="col-3">
+  <aside class="col-md-3 d-none d-md-block">
     <div class="list-group">
       <%= link_to "マイページ", favorites_user_path(current_user.id), class: "list-group-item list-group-item-action" %>
       <%= link_to "店舗作成", new_shop_path, class: "list-group-item list-group-item-action" %>
