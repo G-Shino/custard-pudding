@@ -91,8 +91,8 @@ hr {
   color: white;
   height: 700px;
   width: 100vw;
-  padding-top: 180px;
-  padding-left: 10px;
+  padding-top: 200px;
+  padding-left: 15px;
   background-image: url("/assets/pudding_top.jpg");
   background-size: cover;
 }
