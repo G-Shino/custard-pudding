@@ -95,6 +95,7 @@ hr {
   padding-left: 15px;
   background-image: url("/assets/pudding_top.jpg");
   background-size: cover;
+  background-position: center top;
 }
 
 #topPudding h1 {
