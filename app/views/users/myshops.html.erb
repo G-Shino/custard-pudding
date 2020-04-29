@@ -2,8 +2,8 @@
   <div class="col-5">
     <h1><%= @user.name %>さんのページ</h1>
   </div>
-  <div class="col-3 h-75 d-flex justify-content-between">
-    <%= link_to "店舗作成", new_shop_path, class: "btn btn-primary btn-sm" %>
+  <div class="col-3 h-75 d-flex justify-content-start align-self-center">
+    <%= link_to "店舗作成", new_shop_path, class: "btn btn-primary btn-sm mr-5" %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-sm" %>
   </div>
 </div>
