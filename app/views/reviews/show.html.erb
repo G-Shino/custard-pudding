@@ -6,4 +6,4 @@
 <% if current_user == @review.user%>
     <%= link_to "このレビューを削除する", @review, method: :delete, data: {confirm: "削除してよろしいですか？"}, class: "btn btn-danger btn-sm" %>
 <% end %>
-<%= link_to "店舗詳細に戻る", @review.shop %>
+<%= link_to "店舗詳細に戻る", @review.shop, class: "btn btn-primary btn-sm" %>
