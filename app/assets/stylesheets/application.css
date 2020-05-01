@@ -87,6 +87,12 @@ hr {
   border-color: #892f1B;
 }
 
+.list-group-item:hover {
+  color: #fff3b8;
+  border-color: #892f1B;
+  background-color: #892f1B;
+}
+
 .pagination>li>a {
   color: #892f1B;
   border-color: #892f1B;
@@ -104,6 +110,20 @@ hr {
   border-color: #892f1B !important;
   background-color: #892f1B !important;
   border-radius: 12px
+}
+
+.dropdown-menu {
+  color: #892f1B;
+  border-color: #892f1B;
+  background-color: #fff3b8;
+}
+
+.dropdown-item>a {
+  color: #892f1B;
+}
+
+.dropdown-item:hover {
+  background-color: #f0ad4e;
 }
 
 #topPudding {
