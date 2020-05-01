@@ -1,11 +1,11 @@
 class ShopsController < ApplicationController
   def index
-    @shops = Shop.all
+    @shops = Shop.all.page(params[:page]).per(5)
   end
   
   def show
     @shop=Shop.find(params[:id])
-    @reviews = @shop.reviews
+    @reviews = @shop.reviews.page(params[:page]).per(3)
     session[:shop_id] = @shop.id
   end
 

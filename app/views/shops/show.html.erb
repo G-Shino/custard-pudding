@@ -45,9 +45,9 @@
   <div>
     <h2 class="mr-5">レビュー一覧</h2>
     <hr/>
-    <%= render "reviews/reviews_list", reviews: @reviews %>
     <div class="container">
-      <%= link_to "自分のレビューを投稿する", new_review_path, class: "btn btn-warning btn-block mb-5"%>
+      <%= link_to "自分のレビューを投稿する", new_review_path, class: "btn btn-warning btn-block mb-3 mt-3"%>
     </div>
+    <%= render "reviews/reviews_list", reviews: @reviews %>
   </div>
 </div>
