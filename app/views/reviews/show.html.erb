@@ -25,11 +25,31 @@
       <table class="table table-bordered">
         <tr>
           <th>プリンの固さ</th>
-          <td><%= @review.hardness%></td>
+          <td>
+            固め&nbsp;
+            <% for num in 1..5 do %>
+              <% if num ==  @review.hardness %>
+                <span class="fa fa-circle checked"></span>
+              <% else %>
+                <span class="fa fa-circle"></span>
+              <% end %>
+            <% end %>
+            &nbsp;とろける
+          </td>
         </tr>
         <tr>
           <th>プリンの濃厚さ</th>
-          <td><%= @review.richness%></td>
+          <td>
+            濃厚&nbsp;
+            <% for num in 1..5 do %>
+              <% if num ==  @review.hardness %>
+                <span class="fa fa-circle checked"></span>
+              <% else %>
+                <span class="fa fa-circle"></span>
+              <% end %>
+            <% end %>
+            &nbsp;あっさり
+          </td>
         </tr>
         <tr>
           <th>キャラメル</th>

@@ -6,7 +6,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :hardness
       t.integer :richness
-      t.integer :caramel
+      t.string :caramel
       t.string :comment
 
       t.timestamps

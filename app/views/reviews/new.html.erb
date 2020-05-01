@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <%= f.label :caramel, "キャラメル" %><br />
-            <%= f.select :caramel, {"苦い": 1, "甘い": 2, "なし": 3}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
+            <%= f.select :caramel, {"苦い": "苦い", "甘い": "甘い", "なし": "なし"}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
         </div>
         <div class="form-group">
             <%= f.label :image, "商品写真" %><br />

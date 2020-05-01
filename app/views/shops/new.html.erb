@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             <%= f.label :kind, "種類" %><br />
-            <%= f.select :kind, {"コンビニ": 1, "カフェ": 2}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
+            <%= f.select :kind, {"カフェ": "カフェ", "コンビニ": "コンビニ", "ケーキ屋さん": "ケーキ屋さん"}, {include_blank: "選択してください"}, class: "form-control", required: true  %>
         </div>
         <div class="form-group">
             <%= f.label :address, "住所" %><br />
