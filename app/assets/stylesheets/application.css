@@ -108,3 +108,7 @@ hr {
   opacity: 0.7;
   letter-spacing: 5px
 }
+
+.checked {
+  color: orange;
+}

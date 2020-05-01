@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_165612) do
     t.string "name"
     t.integer "hardness"
     t.integer "richness"
-    t.integer "caramel"
+    t.string "caramel"
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_165612) do
 
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "kind"
+    t.string "kind"
     t.string "address"
     t.string "holiday"
     t.bigint "user_id"
